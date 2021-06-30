@@ -1,0 +1,35 @@
+Username : 
+Password : 
+Company : xxxxx Enterprises
+CBuilding : xxxxxxxxxxxx
+CStreet : patil chawl
+CLandmark : xxxxxxxxxxxxxxx
+CLocality : sector - 48
+CPincode : 400703
+Contact : 1234567890
+EmailId : 12341234@gmail.com
+N_O_B : electrician
+
+Male: 4
+Female : 4
+Trans : 0
+
+OwnersName : xxx xxxx xxxx
+Building_P : house no. - xxx
+Street_P : xxx
+Landmark_P : serc
+Locality_P : nerul
+PinCode_P : 400706
+
+
+
+
+
+
+
+
+
+
+
+UIDNo_employer : 123412341234
+ 

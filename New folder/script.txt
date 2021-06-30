@@ -1,0 +1,88 @@
+from selenium import webdriver
+from selenium.webdriver.support.ui import Select
+import time
+username='jagdishmadhavi5654'
+password='Omsai@1234'
+url='https://lms.mahaonline.gov.in/'
+driver=webdriver.Chrome('C:\\Users\\user\\Downloads\\chromedriver_win32\\chromedriver')
+
+driver.get(url)
+
+driver.find_element_by_id('UserName').send_keys(username)
+driver.find_element_by_id('Password').send_keys(password)
+driver.find_element_by_id('btnLogin').click()
+
+url='https://lms.mahaonline.gov.in/ShopEstabilishment/ShopEstabilishment?ServiceID=3&Department=Shop'
+driver.get(url)
+driver.find_element_by_id('Confirm').click()
+
+
+objShpEstab_Division=Select(driver.find_element_by_id("objShpEstab_Division_Value")).select_by_value('1');time.sleep(1)
+objShpEstab_Distict=Select(driver.find_element_by_id("objShpEstab_Distict_Value")).select_by_value('2');time.sleep(0.4)
+objShpEstab_Office=Select(driver.find_element_by_id("objShpEstab_Office_Value")).select_by_value('30');time.sleep(0.4)
+
+driver.find_element_by_id("objShpEstab_InstitutionName").send_keys("siddhant dhandore")
+
+objShpEstab_PreviousEstablishmentRegType=Select(driver.find_element_by_id("objShpEstab_PreviousEstablishmentRegType_ID")).select_by_value('3')
+
+driver.find_element_by_id("objAddressUCModel_AddrofBuilding_C").send_keys("house no.-366")
+driver.find_element_by_id("objAddressUCModel_AddrofStreet_C").send_keys("gopal patil chawl")
+driver.find_element_by_id("objAddressUCModel_AddrofLandmark_C").send_keys("sector 20")
+driver.find_element_by_id("objAddressUCModel_AddrofLocality_C").send_keys("nerul west")
+driver.find_element_by_id("objShpEstab_InstitutionContactNo").send_keys("sector 20");time.sleep(0.4)
+driver.find_element_by_id("objShpEstab_InstitutionEmailId").clear();time.sleep(0.4)
+driver.find_element_by_id("objShpEstab_InstitutionEmailId").send_keys("sector 20")
+
+
+objAddressUCModel_DistrictCode_C=Select(driver.find_element_by_id("objAddressUCModel_DistrictCode_C")).select_by_visible_text('Thane');time.sleep(0.4)
+objAddressUCModel_TalukaCode_C=Select(driver.find_element_by_id("objAddressUCModel_TalukaCode_C")).select_by_visible_text('Thane');time.sleep(0.4)
+objAddressUCModel_VillageCode_C=Select(driver.find_element_by_id("objAddressUCModel_VillageCode_C")).select_by_visible_text('Navi Mumbai (Municipal Corporation.)')
+driver.find_element_by_id("objAddressUCModel_PinCode_C").send_keys("400706")
+objShpEstab_LandType_Value=Select(driver.find_element_by_id("objShpEstab_LandType_Value")).select_by_value('R')
+driver.find_element_by_id("objShpEstab_NatureofBusiness").send_keys("siddhant dhandore")
+objShpEstab_InstitInPublicPrivateArea_Value=Select(driver.find_element_by_id("objShpEstab_InstitInPublicPrivateArea_Value")).select_by_value('PU')
+driver.find_element_by_id("objShpEstab_TotalWorkers_Other_Male").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_other_Females").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_other_Transgender").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_Apprenticeship_Male").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_Apprenticeship_Females").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_Apprenticeship_Transgender").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_ContractLabour_Male").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_ContractLabour_Females").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_ContractLabour_Transgender").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_PartTime_Male").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_PartTime_Females").send_keys("0")
+driver.find_element_by_id("objShpEstab_TotalWorkers_PartTime_Transgender").send_keys("0")
+
+
+
+driver.find_element_by_id("objShpEstab_OwnersName").send_keys("siddhant anandkumar dhadnore")
+driver.find_element_by_id("objAddressUCModel_AddrofBuilding_P").send_keys("om sai niwas")
+driver.find_element_by_id("objAddressUCModel_AddrofStreet_P").send_keys("sector 20")
+driver.find_element_by_id("objAddressUCModel_AddrofLandmark_P").send_keys("near shankar mandir")
+driver.find_element_by_id("objAddressUCModel_AddrofLocality_P").send_keys("nerul east")
+
+objAddressUCModel_DistrictCode_P=Select(driver.find_element_by_id("objAddressUCModel_DistrictCode_P")).select_by_visible_text('Thane');time.sleep(0.4)
+objAddressUCModel_TalukaCode_P=Select(driver.find_element_by_id("objAddressUCModel_TalukaCode_P")).select_by_visible_text('Thane');time.sleep(0.4)
+objAddressUCModel_VillageCode_P=Select(driver.find_element_by_id("objAddressUCModel_VillageCode_P")).select_by_visible_text('Navi Mumbai (Municipal Corporation.)');time.sleep(0.2)
+
+driver.find_element_by_id("objAddressUCModel_PinCode_P").send_keys("400706")
+driver.find_element_by_id("objAddressUCModel_ResidentSince_P").send_keys("2020")
+driver.find_element_by_id("objAddressUCModel_UIDNo_employer").send_keys("676848065208")
+driver.find_element_by_id("objAddressUCModel_EmailID_employer").send_keys("siddhantdhanodre@gmail.com")
+driver.find_element_by_id("objAddressUCModel_MobileNo__employer").send_keys("7738006680")
+driver.find_element_by_id("objAddressUCModel_Status_employer").send_keys("proprietor")
+
+
+
+
+objShpEstab_EstablishmentTypeMst_Value=Select(driver.find_element_by_id("objShpEstab_EstablishmentTypeMst_Value")).select_by_value('CE');time.sleep(0.5)
+objShpEstab_EstablishmentType_Value=Select(driver.find_element_by_id("objShpEstab_EstablishmentType_Value")).select_by_value('147');time.sleep(0.2)
+driver.find_element_by_id("objShpEstab_BusinessType").send_keys("readymade garments shop")
+objShpEstab_EstablishmentCategory_Value=Select(driver.find_element_by_id("objShpEstab_EstablishmentCategory_Value")).select_by_value('SO')
+driver.find_element_by_id("objShpEstab_InstiOwnersFamilydetails").send_keys("0")
+driver.find_element_by_id("objShpEstab_InstitOwnersTotalFamilyMembers_Males").send_keys("0")
+driver.find_element_by_id("objShpEstab_InstitOwnersTotalFamilyMembers_Females").send_keys("0")
+driver.find_element_by_id("objShpEstab_InstitOwnersTotalFamilyMembers_Transgender").send_keys("0")
+checkboxElement = driver.find_element_by_id("checkboxPrimary")
+checkboxElement.click()
